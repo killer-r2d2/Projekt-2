@@ -418,7 +418,7 @@ export function NxWelcome({ title }: { title: string }) {
         <div className="container">
           <div id="welcome">
             <h1>
-              <span> Hello there, </span>
+              <span className="p-4 pt-4"> Hello there, I am using tailwind </span>
               Welcome {title} 👋
             </h1>
           </div>
