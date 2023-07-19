@@ -1,4 +1,4 @@
-import styles from './navigation.module.css';
+import { Link } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 
@@ -28,10 +28,10 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 };
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Products', href: '/products', current: true },
+  { name: 'Team', href: '/team', current: false },
+  { name: 'Projects', href: '/projects', current: false },
+  { name: 'Calendar', href: '/calendar', current: false },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -126,15 +126,24 @@ export const Navigation = () => {
                       {userNavigation.map((item) => (
                         <Menu.Item key={item.name}>
                           {({ active }) => (
-                            <a
-                              href={item.href}
+                            // <a
+                            //   href={item.href}
+                            //   className={classNames(
+                            //     active ? 'bg-gray-100' : '',
+                            //     'block px-4 py-2 text-sm text-gray-700'
+                            //   )}
+                            // >
+                            //   {item.name}
+                            // </a>
+                            <Link
+                              to={item.href}
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'
                               )}
                             >
                               {item.name}
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                       ))}
@@ -148,9 +157,9 @@ export const Navigation = () => {
               aria-label="Global"
             >
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={classNames(
                     item.current
                       ? 'bg-gray-100 text-gray-900'
@@ -160,7 +169,7 @@ export const Navigation = () => {
                   aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
