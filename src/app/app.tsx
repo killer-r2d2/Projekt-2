@@ -3,7 +3,7 @@ import { Layout } from './layout/layout';
 import Team from './pages/team/team';
 import Products from './pages/products/products';
 import Projects from './pages/projects/projects';
-import Calendar from './pages/calendar/calendar';
+import Hooks from './pages/hooks/hooks';
 import Home from './pages/home/home';
 import Error404 from './pages/error404/error404';
 
@@ -16,7 +16,7 @@ export function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/products" element={<Products />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/hooks" element={<Hooks />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </Layout>

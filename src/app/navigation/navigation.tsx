@@ -31,7 +31,7 @@ const navigation = [
   { name: 'Products', href: '/products', current: false },
   { name: 'Team', href: '/team', current: false },
   { name: 'Projects', href: '/projects', current: false },
-  { name: 'Calendar', href: '/calendar', current: false },
+  { name: 'Hooks', href: '/hooks', current: false },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
